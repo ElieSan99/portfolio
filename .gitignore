@@ -11,10 +11,18 @@ venv/
 .ipynb_checkpoints/
 
 # Data
+projects/**/data/raw/
+projects/**/data/processed/
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+
+# MLflow
+**/mlruns/
+**/models/
+
+
 
 # OS
 .DS_Store

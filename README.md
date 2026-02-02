@@ -26,6 +26,9 @@ NLP, IA Générative et mise en production de modèles ML.
 ### 5. Pipeline de données - Transports publics
 👉 [Voir le projet](projects/data-pipeline-public-transport/)
 
+### 6. Système de Trading Multi-Agent (RL & LLM)
+👉 [Voir le projet](projects/multi-agent-trading-rl/)
+
 
 ## 🔧 Stack technique
 Python, PyTorch, TensorFlow, SQL, MLflow, Docker, Airflow, FastAPI, AWS, GCP
