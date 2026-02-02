@@ -15,7 +15,7 @@ NLP, IA Générative et mise en production de modèles ML.
 👉 [Voir le projet](projects/anomaly-detection-ecommerce/)
 
 ### 2. Détection de fraude bancaire (ML Engineer)
-👉 [Voir le projet](projects/fraud-detection-mlops/)
+🚀 **[Démo Live (API)](https://fraud-detection-api-525661061817.europe-west1.run.app/)** | 👉 [Voir le projet](projects/fraud-detection-mlops/)
 
 ### 3. Assistant RAG – Recherche documentaire
 👉 [Voir le projet](projects/rag-document-assistant/)
