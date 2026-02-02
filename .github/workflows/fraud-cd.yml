@@ -1,6 +1,9 @@
 name: Fraud — Deploy to Cloud Run
 
 on:
+  push:
+    branches:
+      - main
   workflow_run:
     workflows: ["Fraud — Train & Gate"]
     types:
