@@ -32,7 +32,7 @@ jobs:
         run: |
           python -m training.pipeline --input-path ../data/sample/creditcard_sample.csv
 
-      - name: Gate: compare candidate to baseline
+      - name: "Gate: compare candidate to baseline"
         working-directory: projects/fraud-detection-mlops/src
         run: |
           python -m evaluation.gate \
