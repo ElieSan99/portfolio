@@ -19,8 +19,8 @@ data/processed/*
 !data/processed/.gitkeep
 
 # MLflow
-mlruns/
-models/
+**/mlruns/
+**/models/
 
 
 
