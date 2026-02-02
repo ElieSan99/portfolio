@@ -1,0 +1,45 @@
+name: Fraud — Deploy to Cloud Run
+
+on:
+  workflow_run:
+    workflows: ["Fraud — Train & Gate"]
+    types:
+      - completed
+  workflow_dispatch: # Permet de lancer manuellement
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker
+        run: gcloud auth configure-docker europe-west1-docker.pkg.dev
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t europe-west1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio/fraud-api:${{ github.sha }} -f projects/fraud-detection-mlops/Dockerfile projects/fraud-detection-mlops
+          docker push europe-west1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio/fraud-api:${{ github.sha }}
+
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: fraud-detection-api
+          image: europe-west1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio/fraud-api:${{ github.sha }}
+          region: europe-west1
+          flags: "--allow-unauthenticated"
