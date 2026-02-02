@@ -20,7 +20,9 @@ data/processed/*
 
 # MLflow
 **/mlruns/
-**/models/
+
+# On versionne les modèles finaux pour le déploiement Cloud Run
+!**/models/
 
 
 

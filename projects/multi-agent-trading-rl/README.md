@@ -8,16 +8,16 @@ Ce projet propose une architecture multi-agents où chaque composant est spécia
 ## 🏗️ Architecture globale
 Le système repose sur quatre agents autonomes orchestrés via **LangGraph** :
 1.  **Flux Analyzer :** Analyse les indicateurs techniques et les flux de données.
-2.  **Risk Strategist :** Définit la taille des positions et les stop-loss selon la volatilité.
+2.  **Risk Strategist :** Définit la taille des positions et les stop-loss selon la volatilité (ATR).
 3.  **Executor :** Gère l'envoi des ordres et le suivi de l'exécution.
 4.  **Critic Agent :** Réalise l'auto-réflexion sur les performances passées pour ajuster les stratégies.
 
 ## ⚙️ Approche technique
 *   **Deep Reinforcement Learning :** Modélisation du trading comme un problème de décision séquentielle (Gymnasium).
 *   **RAG (Retrieval Augmented Generation) :** Utilisation de Pinecone pour stocker les profils de marché et enrichir le contexte des agents.
-*   **Stack MLOps :** Docker pour la portabilité, Prometheus pour le monitoring des performances financières.
+*   **Déploiement :** Architecture modulaire prête pour Docker.
 
-## 🚀 Impact & Résultats
-*   Exécution automatisée 24/7 sur les paires de devises majeures.
-*   Optimisation du ratio de Sortino grâce à l'ajustement dynamique du risque.
-*   Architecture modulaire permettant l'ajout facile de nouveaux types d'analyses (Sentiment, Macro, etc.).
+## 🚀 Impact & Valeur Ajoutée
+*   **Automatisation intelligente :** Réduction de l'erreur humaine et fatigue émotionnelle du trader.
+*   **Gestion Adaptative du Risque :** Ajustement dynamique des paramètres en fonction de la volatilité réelle du marché.
+*   **Auditabilité :** Chaque décision de l'agent Critic permet de comprendre pourquoi une stratégie a fonctionné ou non.
