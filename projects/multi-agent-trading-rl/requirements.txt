@@ -1,0 +1,14 @@
+langgraph
+langchain
+langchain-openai
+pinecone-client
+pandas
+numpy
+pydantic
+python-dotenv
+yfinance
+ta
+gymnasium
+stable-baselines3
+matplotlib
+scikit-learn
