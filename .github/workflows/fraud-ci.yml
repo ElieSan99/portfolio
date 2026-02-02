@@ -7,7 +7,7 @@ on:
       - feature/**
     paths:
       - "projects/fraud-detection-mlops/**"
-      - ".github/workflows/fraud-train-gate.yml"
+      - ".github/workflows/fraud-ci.yml"
 
 jobs:
   train-and-gate:
