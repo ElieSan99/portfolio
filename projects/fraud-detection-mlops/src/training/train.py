@@ -15,8 +15,8 @@ def train_model(X: pd.DataFrame, y: pd.Series) -> None:
     """
     Entraîne un modèle baseline (Logistic Regression) et log les résultats dans MLflow.
     """
-    # Utilisation d'un chemin relatif pour éviter les erreurs de permission sur Linux CI
-    mlflow.set_tracking_uri(f"file://{Path(MLFLOW_TRACKING_URI).absolute()}")
+    # Utilisation d'un chemin relatif pour la compatibilité Windows/Linux (CI)
+    mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
     mlflow.set_experiment(EXPERIMENT_NAME)
 
     X_train, X_test, y_train, y_test = train_test_split(
