@@ -1,9 +1,13 @@
 name: 'Airflow CI'
 
 on:
+  push:
+    branches: [ 'feature/**' ]
+    paths:
+      - 'projects/data-market-sentiment/airflow/**'
   pull_request:
     paths:
-      - 'airflow/**'
+      - 'projects/data-market-sentiment/airflow/**'
 
 jobs:
   airflow-ci:
@@ -25,10 +29,10 @@ jobs:
         pip install black flake8 pytest praw pandas pyarrow great-expectations apache-airflow
 
     - name: Lint with black
-      run: black --check airflow/
+      run: black --check projects/data-market-sentiment/airflow/
 
     - name: Lint with flake8
-      run: flake8 airflow/ --count --select=E9,F63,F7,F82 --show-source --statistics
+      run: flake8 projects/data-market-sentiment/airflow/ --count --select=E9,F63,F7,F82 --show-source --statistics
 
     - name: Run tests
-      run: pytest airflow/tests/
+      run: pytest projects/data-market-sentiment/airflow/tests/
