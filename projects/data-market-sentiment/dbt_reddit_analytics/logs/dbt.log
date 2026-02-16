@@ -1,0 +1,13 @@
+[0m13:41:43.670028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EAA779BCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EAA779BD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EAA7737A50>]}
+
+
+============================== 13:41:43.676772 | cff03153-8f57-4afa-9817-ea3b85d34a92 ==============================
+[0m13:41:43.676772 [info ] [MainThread]: Running with dbt=1.11.4
+[0m13:41:43.679424 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'c:\\Users\\elieg\\Documents\\portfolio\\projects\\data-market-sentiment\\dbt_reddit_analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt ', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\elieg\\Documents\\portfolio\\projects\\data-market-sentiment\\dbt_reddit_analytics\\logs'}
+[0m13:41:43.973482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cff03153-8f57-4afa-9817-ea3b85d34a92', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EAA7854350>]}
+[0m13:41:44.181237 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m13:41:44.183246 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m13:41:44.189788 [debug] [MainThread]: Command `cli deps` succeeded at 13:41:44.189788 after 0.75 seconds
+[0m13:41:44.192348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EAA77A00D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EAA14E5690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EAA35341D0>]}
+[0m13:41:44.193613 [debug] [MainThread]: Flushing usage events
+[0m13:41:45.263867 [debug] [MainThread]: An error was encountered while trying to flush usage events

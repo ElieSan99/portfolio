@@ -1,0 +1,50 @@
+name: 'dbt_reddit_analytics'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'reddit_analytics'
+
+# These settings specify where dbt should look for different types of files.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+# Note: layering based on Medallion Architecture
+models:
+  dbt_reddit_analytics:
+    # 1. Bronze Layer (External Tables/Views)
+    bronze:
+      +schema: bronze
+      +materialized: view
+    
+    # 2. Silver Layer (Cleaned & Conformed)
+    silver:
+      +schema: silver
+      +materialized: incremental
+      +incremental_strategy: merge
+      +unique_key: 'post_id'
+      +partition_by: 
+        field: created_at
+        data_type: timestamp
+        granularity: day
+      +cluster_by: ["subreddit", "author"]
+    
+    # 3. Gold Layer (Business Logic)
+    gold:
+      +schema: gold
+      +materialized: table
+    
+    # 4. Marts Layer (Star Schema)
+    marts:
+      +schema: marts
+      +materialized: table
