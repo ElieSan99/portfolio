@@ -26,7 +26,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install black flake8 pytest praw pandas pyarrow great-expectations apache-airflow
+        pip install black flake8 pytest pandas pyarrow great-expectations
+        pip install "apache-airflow[google,docker,standard]"
 
     - name: Lint with black
       run: black --check projects/data-market-sentiment/airflow/
