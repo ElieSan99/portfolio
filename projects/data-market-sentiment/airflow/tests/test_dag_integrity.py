@@ -20,5 +20,7 @@ class TestDagIntegrity(unittest.TestCase):
     def test_reddit_dag_present(self):
         # Utiliser l'accès direct au dictionnaire pour éviter les requêtes DB
         dag = self.dagbag.dags.get("reddit_ingestion_pipeline")
-        self.assertIsNotNone(dag, "Le DAG 'reddit_ingestion_pipeline' n'a pas été trouvé.")
+        self.assertIsNotNone(
+            dag, "Le DAG 'reddit_ingestion_pipeline' n'a pas été trouvé."
+        )
         self.assertTrue(len(dag.tasks) >= 1)
