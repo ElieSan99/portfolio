@@ -1,8 +1,8 @@
 # Système de détection de fraude bancaire — Projet ML Engineering de bout en bout
 
 > [!IMPORTANT]
-> **🚀 Démo Live (API) :** [https://fraud-detection-api-525661061817.europe-west1.run.app/](https://fraud-detection-api-525661061817.europe-west1.run.app/)  
-> **Documentation Interactive :** [/docs](https://fraud-detection-api-525661061817.europe-west1.run.app/docs)
+> **🚀 Démo Live (API) :** [https://fraud-detection-api-525661061817.europe-west1.run.app/docs](https://fraud-detection-api-525661061817.europe-west1.run.app/)  
+
 
 ## 🎯 Contexte métier
 La fraude bancaire représente un enjeu majeur pour les institutions financières, tant en termes de pertes économiques que de confiance des clients. Les transactions frauduleuses sont rares par rapport au volume total de transactions (< 0.2%), mais leur impact est critique.
