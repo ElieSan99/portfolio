@@ -1,0 +1,45 @@
+name: 'Airflow CI'
+
+on:
+  push:
+    branches: [ 'feature/**' ]
+    paths:
+      - 'projects/data-market-sentiment/airflow/**'
+  pull_request:
+    paths:
+      - 'projects/data-market-sentiment/airflow/**'
+
+jobs:
+  airflow-ci:
+    name: 'Lint & Test Airflow'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python_version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install black flake8 pytest pandas pyarrow great-expectations requests
+        python -m pip install apache-airflow==2.10.0
+        python -m pip install apache-airflow-providers-google apache-airflow-providers-docker apache-airflow-providers-standard
+
+    - name: Debug Info
+      run: |
+        python --version
+        python -m pip list | grep airflow
+
+    - name: Lint with black
+      run: python -m black --check projects/data-market-sentiment/airflow/
+
+    - name: Lint with flake8
+      run: python -m flake8 projects/data-market-sentiment/airflow/ --count --select=E9,F63,F7,F82 --show-source --statistics
+
+    - name: Run tests
+      run: python -m pytest projects/data-market-sentiment/airflow/tests/

@@ -5,7 +5,11 @@ import pandas as pd
 from pathlib import Path
 import os
 
-app = FastAPI(title="Fraud Detection API")
+app = FastAPI(
+    title="Fraud Detection API",
+    docs_url="/docs",
+    redoc_url="/redoc"
+)
 
 # Configuration des chemins
 BASE_DIR = Path(__file__).resolve().parent.parent

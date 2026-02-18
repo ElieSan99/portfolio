@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_reddit
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: bronze_reddit
+    tables:
+      - name: reddit_posts_ext
+        description: "Table externe pointant vers les fichiers Parquet sur GCS"
+        identifier: reddit_posts_ext

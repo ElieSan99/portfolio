@@ -10,21 +10,32 @@ venv/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data
+# Data & Temporary files
 projects/**/data/raw/
 projects/**/data/processed/
+projects/**/data/tmp*/
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+.terraform.lock.hcl
+
+# Old Projects & Deprecated Code (Portfolio Clean-up)
+projects/twitter-sentiment-analysis/
+projects/data-market-sentiment/elt_pipeline/
+projects/data-market-sentiment/data/
 
 # MLflow
 **/mlruns/
 
 # On versionne les modèles finaux pour le déploiement Cloud Run
 !**/models/
-
-
 
 # OS
 .DS_Store
