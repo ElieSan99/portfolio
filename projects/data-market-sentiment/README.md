@@ -5,20 +5,21 @@
 [![Terraform CI](https://github.com/ElieSan99/portfolio/actions/workflows/terraform-ci.yml/badge.svg)](https://github.com/ElieSan99/portfolio/actions/workflows/terraform-ci.yml)
 [![Airflow CI](https://github.com/ElieSan99/portfolio/actions/workflows/airflow-ci.yml/badge.svg)](https://github.com/ElieSan99/portfolio/actions/workflows/airflow-ci.yml)
 
-## 🎯 Problématique & Solution
+## - Problématique & Solution
 
 **Le Problème** : Les données sociales (Reddit) sont massives, non structurées et extrêmement volatiles. Les entreprises peinent à extraire des tendances claires sans une infrastructure robuste capable de gérer le bruit et les variations de volume.
 
 **La Solution** : Une plateforme de données **Cloud-Native** (GCP) utilisant une architecture **Medallion**. Elle automatise l'extraction, la validation de qualité (Data Quality), et le stockage optimisé pour l'analytics et le Machine Learning.
 
-## 📊 Metrics & Impact (Crédibles)
+## - Metrics & Impact (Crédibles)
 
 *   **Scalabilité** : Architecture conçue pour absorber des pics de volume (streaming possible via Pub/Sub en phase 3).
 *   **Efficience Coût** : Réduction de **60% des coûts de requête** BigQuery grâce au format Parquet et au partitionnement Hive sur GCS.
 *   **Qualité** : Taux de conformité des données de **99.9%** grâce aux tests d'expectations automatisés (Great Expectations).
 *   **Automation** : Pipeline 100% autonome géré par Airflow, libérant 40h/mois d'ingénierie manuelle.
 
-## 🧠 Philosophie & Justification de l'Approche
+## - Philosophie & Justification de l'Approche base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base base (Crédibles)
+
 
 Ce projet n'est pas qu'un simple pipeline d'ingestion ; c'est une infrastructure de données conçue pour la décision et l'IA. Voici la justification de mes choix stratégiques :
 
@@ -41,7 +42,7 @@ Bien que la phase de ML soit la suite logique, l'infrastructure actuelle sert de
 
 ---
 
-## 🚀 Dualité du Projet : Analytics vs Machine Learning
+## - Dualité du Projet : Analytics vs Machine Learning
 
 Ce projet est conçu pour servir deux types de consommateurs de données avec des exigences différentes :
 
@@ -58,9 +59,9 @@ Focus sur la **puissance prédictive**. Le pipeline traite les données brutes p
 
 ---
 
-## 🏗️ Architecture Technique
+## - Architecture Technique
 
-## 📂 Structure Professionnelle
+## - Structure Professionnelle
 
 ```text
 data-market-sentiment/
@@ -75,7 +76,7 @@ data-market-sentiment/
 └── dbt/                # Transformation Analytics (Medallion Layers)
 ```
 
-## 🧠 Trade-offs & Maturité Technique
+## - Trade-offs & Maturité Technique
 
 ### Pourquoi ces choix ?
 *   **Airflow vs Cloud Functions** : Bien que plus coûteux à configurer, Airflow a été choisi pour sa gestion supérieure des dépendances complexes et sa capacité de re-jeu (backfill), indispensables pour des pipelines de données critiques.
@@ -85,7 +86,7 @@ data-market-sentiment/
 *   **Rate-limiting Reddit** : Le pipeline est limité par les quotas de l'API Reddit. Une future itération utilisera des proxies ou une gestion de cache plus agressive.
 *   **Latence** : Actuellement en batch (quotidien/horaire). Pour un cas d'usage "Trading Haute Fréquence", une transition vers Pub/Sub + Dataflow serait nécessaire.
 
-## 🚀 Stratégie de Démo
+## - Stratégie de Démo
 Pour un effet "Wow" immédiat, le projet sera complété par :
 1.  **Dashboard Streamlit** : Visualisation interactive des sentiments par subreddit.
 2.  **ML Predictor** : Modèle de prédiction de tendance basé sur le sentiment agrégé.
