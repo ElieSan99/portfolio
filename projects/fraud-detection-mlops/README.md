@@ -1,15 +1,15 @@
 # Système de détection de fraude bancaire — Projet ML Engineering de bout en bout
 
 > [!IMPORTANT]
-> **🚀 Démo Live (API) :** [https://fraud-detection-api-525661061817.europe-west1.run.app/docs](https://fraud-detection-api-525661061817.europe-west1.run.app/)  
+> **- Démo Live (API) :** [https://fraud-detection-api-525661061817.europe-west1.run.app/docs](https://fraud-detection-api-525661061817.europe-west1.run.app/docs)  
 
 
-## 🎯 Contexte métier
+## - Contexte métier
 La fraude bancaire représente un enjeu majeur pour les institutions financières, tant en termes de pertes économiques que de confiance des clients. Les transactions frauduleuses sont rares par rapport au volume total de transactions (< 0.2%), mais leur impact est critique.
 
 Ce projet vise à concevoir un système de détection de fraude capable d’analyser des transactions bancaires et d’identifier, avec une forte réactivité, les comportements suspects, tout en limitant les faux positifs afin de ne pas dégrader l’expérience client.
 
-## ❓ Problème à résoudre
+## - Problème à résoudre
 Le défi principal est de détecter automatiquement les transactions frauduleuses dans un grand volume de données transactionnelles avec un **fort déséquilibre des classes**.
 
 Les objectifs techniques sont :
@@ -17,19 +17,19 @@ Les objectifs techniques sont :
 - Sélection de métriques adaptées (**Recall** vs Precision).
 - Mise en place d'une infrastructure **MLOps** pour garantir la reproductibilité et la stabilité en production.
 
-## 🏗️ Architecture globale & MLOps
+## - Architecture globale & MLOps
 Ce projet implémente un cycle de vie complet du modèle :
 1.  **Entraînement & Tracking :** Utilisation de **MLflow** pour le suivi des expériences et des métriques.
 2.  **Qualité (CI) :** Pipeline GitHub Actions qui automatise l'entraînement sur un échantillon et valide les performances via un **Gate** de décision.
 3.  **Déploiement (CD) :** Conteneurisation via **Docker** et déploiement serverless sur **Google Cloud Run** après chaque merge validé.
 
-## ⚙️ Approche technique
+## - Approche technique
 *   **Modèle :** Régression Logistique avec pondération équilibrée.
 *   **Preprocessing :** StandardScaler intégré au pipeline d'inférence.
 *   **Frameworks :** Scikit-Learn, MLflow, FastAPI, Pydantic.
 *   **Infrastructure :** Docker, GitHub Actions, Google Cloud Platform (Artifact Registry & Cloud Run).
 
-## 🚀 Comment tester l'API ?
+## - Comment tester l'API ?
 Vous pouvez tester l'API en direct via la [documentation Swagger](https://fraud-detection-api-525661061817.europe-west1.run.app/docs) ou via un `curl` :
 
 ```bash
